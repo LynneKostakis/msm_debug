@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-    @actors = Actor.all
+    @actors = Actor.order(created_at: :desc)
   end
 
   def show
@@ -24,6 +24,8 @@ class ActorsController < ApplicationController
 
   def edit_form
     @actor = Actor.find(params[:id])
+    
+    render("actors/edit_form.html.erb")
   end
 
   def update_row
