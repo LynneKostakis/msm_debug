@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # CREATE
   get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
   get('/create_director', { :controller => 'director', :action => 'create_row' })
+  
 
   # READ
   get('/directors', { :controller => 'directors', :action => 'index' })
