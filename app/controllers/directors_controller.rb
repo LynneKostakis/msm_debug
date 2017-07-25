@@ -9,10 +9,13 @@ class DirectorsController < ApplicationController
   end
 
   def new_form
+    
+    render("new_form")
   end
 
   def create_row
     @director = Director.new
+    @director.id = params[:id]
     @director.dob = params[:dob]
     @director.name = params[:name]
     @director.bio = params[:bio]
@@ -31,7 +34,7 @@ class DirectorsController < ApplicationController
 
   def update_row
     @director = Director.find(params[:id])
-
+    @director.id = params[:id]
     @director.dob = params[:dob]
     @director.name = params[:name]
     @director.bio = params[:bio]
