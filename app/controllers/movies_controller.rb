@@ -37,6 +37,7 @@ class MoviesController < ApplicationController
     @movie.image_url = params[:image_url]
     @movie.director_id = params[:director_id]
    
+   
     @movie.save
     
     render("show")
