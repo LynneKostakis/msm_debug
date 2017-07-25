@@ -24,7 +24,7 @@ class RolesController < ApplicationController
   def edit_form
     @role = Role.find(params[:id])
     
-    render("rolwe/edit_form.html.erb")
+    render("actor/edit_form.html.erb")
   end
 
   def update_row
