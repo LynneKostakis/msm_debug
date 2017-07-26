@@ -26,6 +26,7 @@ class MoviesController < ApplicationController
 
   def edit_form
     @movie = Movie.find(params[:id])
+    @movie.director_id = params[:the_director_id]
     render("movies/edit_form.html.erb")
   end
 
