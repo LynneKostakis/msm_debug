@@ -40,7 +40,7 @@ class MoviesController < ApplicationController
    
     @movie.save
     
-    render("show")
+    redirect_to("/movies")
   end
 
   def destroy
