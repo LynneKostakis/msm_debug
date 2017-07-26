@@ -23,6 +23,8 @@ class RolesController < ApplicationController
 
   def edit_form
     @role = Role.find(params[:id])
+    
+    render("roles/edit_form.html.erb")
   end
 
   def update_row
@@ -34,7 +36,7 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    redirect_to("/roles")
   end
 
   def destroy
