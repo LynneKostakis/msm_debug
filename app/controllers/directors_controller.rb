@@ -42,7 +42,7 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    render("show")
+    render("roles")
   end
 
   def destroy
